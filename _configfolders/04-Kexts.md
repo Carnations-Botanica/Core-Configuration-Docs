@@ -269,6 +269,9 @@ Yes, for real. Theres a [floppy kext](https://github.com/Goldfish64/VoodooFloppy
 ## Sensor Data
 - SMCBatteryManager
 - ECEnabler
+- CrosEC
+- YogaSMC
+- SMCDellSensors
 
 ## Input
 - Your time to shine Gwy
