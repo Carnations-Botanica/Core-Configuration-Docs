@@ -272,6 +272,7 @@ Yes, for real. Theres a [floppy kext](https://github.com/Goldfish64/VoodooFloppy
 - CrosEC
 - YogaSMC
 - SMCDellSensors
+- AsusSMC
 
 ## Input
 - Your time to shine Gwy
