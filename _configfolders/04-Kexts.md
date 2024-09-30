@@ -275,7 +275,35 @@ Yes, for real. Theres a [floppy kext](https://github.com/Goldfish64/VoodooFloppy
 - AsusSMC
 
 ## Input
-- Your time to shine Gwy
+
+<!-- In progress -->
+
+### PS2:
+Acidanthera's VoodooPS2 - 10.10+
+ - Elans
+ - Alps
+ - Synaptics
+ - SentelicFSP
+Rehabman VoodooPS2 - Older versions of macOS
+ - Synaptics
+VoodooPS2 Alps - Older versions of macOS
+ - Alps
+
+### SMBus:
+VoodooSMBus - 10.14+ (Note that I am working on a new thingy for this)
+ - Elans
+VoodooRMI - 10.10+
+ - Synaptics
+ - Comes with it's own version of VoodooSMBus that supports 10.10+
+
+### I2C:
+VoodooI2C - 10.11+ with anyone of the following satellites
+ - Precision/HID Multitouch: VoodooI2CHID
+ - Synaptics: VoodooRMI
+ - Alps: AlpsHID
+ - Elan: VoodooI2CElan
+ - AtmelMXT Touchpads: VoodooI2CAtmelMXT
+ - FTE: VoodooI2CFTE
 
 # Misc
 - MacHyperVSupport.kext
