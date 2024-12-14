@@ -132,7 +132,7 @@ SMCRadeonSensors supports macOS 10.14 Mojave up to macOS 15 Sequoia.
 
 # **Graphics Related**
 
-## [WhateverGreen](https://github.com/acidanthera/WhateverGreen/){:target="_blank"}
+## [WhateverGreen](https://github.com/acidanthera/WhateverGreen){:target="_blank"}
 Whatevergreen (known years ago as NvidiaGraphicsFixup, IntelGraphicsFixup, IntelGraphicsDVMTFixup, CoreDisplayFixup and Shiki) provides a [range of patches and fixes](https://github.com/acidanthera/WhateverGreen/?tab=readme-ov-file#features) for GPUs from all manufacturers (ATI/AMD, Intel, Nvidia). The primary purpose of WhateverGreen is to address issues that arise when macOS does not natively support certain GPUs. Almost all GPUs (apart from completely unsupported cards as well as AMD APUs and Navi22) benfit from it. 
 WhateverGreen supports OS X 10.6 Snow Leopard to macOS 15 Sequoia.
 
@@ -143,7 +143,7 @@ NootedRed provides support for Vega-based APUs. Oversimplified, it patches exist
 
 ---
 
-## [NootRX](https://github.com/ChefKissInc/NootRXNootedRX){:target="_blank"}
+## [NootRX](https://github.com/ChefKissInc/NootRX){:target="_blank"}
 NootRX is a kext providing patches for Navi21, -22 and -23 based GPUs. Just as NootedRed, NootRX comes with issues. WhateverGreen is able to provide patches for Navi21 and -23, NootRX is only necessary for Navi22. Just as for NootedRed, the author of the kext disabled the issue section - you're on your own using this kext.
 
 {: .note }
@@ -153,32 +153,51 @@ If you want to use an eGPU, you should take a look at [Kryptonite](https://githu
 # Other CPU related kexts
 
 ## General
-- RestrictEvents -> Not really CPU related, but should fit best in this category
-- AppleMCEReporterDisabler
-- CryptexFixup
-- Whatever this is https://github.com/benbaker76/HWPEnable
-- telemetrap
-- VoodooTSCSync
-- MouSSE https://forums.macrumors.com/threads/mp3-1-others-sse-4-2-emulation-to-enable-amd-metal-driver.2206682/
+### [RestrictEvents](https://github.com/acidanthera/RestrictEvents)
+Various patches for MacOS.\
+<small>Not really CPU related, but should fit best in this category. </small>
+### [AppleMCEReporterDisabler](https://github.com/acidanthera/bugtracker/files/3703498/AppleMCEReporterDisabler.kext.zip)
+Disables AppleMCE, which can cause panics
+### [CryptexFixup](https://github.com/acidanthera/CryptexFixup)
+Adds AVX2.0 instructions to CPUs without, has caveats.
+### [HWPEnable](https://github.com/benbaker76/HWPEnable)
+Whatever this is
+### [Telemetrap](https://forums.macrumors.com/attachments/telemetrap-0-22-zip.913289/)
+Makes sure telemetry.plugin doesn't run, needed for SSE4.1 CPUs.
+### [VoodooTSCSync](https://github.com/RehabMan/VoodooTSCSync)
+(Someone please fill this in)
+### [MouSSE](https://forums.macrumors.com/threads/mp3-1-others-sse-4-2-emulation-to-enable-amd-metal-driver.2206682/)
+Translates SSE4.2 instructions to SSE4.1.
+### [ForgedInvariant](https://github.com/ChefKissInc/ForgedInvariant)
+Syncs TSC on AMD and Intel.
 
 ## Intel
-- CPUTopologyRebuild
-- CPUTscSync
-- CPUFriend
+### [CPUTopologyRebuild](https://github.com/b00t0x/CpuTopologyRebuild)
+An experimental Lilu plugin that optimizes Alder Lake / Raptor Lake's heterogeneous core configuration.
+### [CPUTscSync](https://github.com/acidanthera/CpuTscSync)
+A Lilu plugin, combining functionality of VoodooTSCSync and disabling xcpm_urgency if TSC is not in sync. It should solve some kernel panics after wake.
+### [CPUFriend](https://github.com/acidanthera/CPUFriend)
+A Lilu plug-in for dynamic power management data injection.
 
 ## AMD
-- Seey6's CPUTSCSync
-- 
+### [Seey6's CPUTSCSync](https://github.com/Seey6/CpuTscSync)
+CPU TSC Sync on AMD. Can fix sleep issues.
 
 # USB
-- USBMap
-- USBToolBox
-- USBInjectAll
-- GUX
-- RyzenGUX
-- XLNCUSBFIX
-- XHCIunsupported
-- USB3 legacy? https://applelife.ru/threads/nastrojka-usb-v-10-11-i-novee.627190/page-3#post-537459
+### [USBMap](https://github.com/corpnewt/USBMap)
+USB Mapping for MacOS
+### [USBToolBox](https://github.com/USBToolBox/kext)
+USBToolBox kext. Should be paired with UTBMap made from [USBToolBox Tool](https://github.com/USBToolBox/tool)
+### [USBInjectAll](https://github.com/RehabMan/OS-X-USB-Inject-All)
+(Someone please fill this in)
+### [GUX-RyzenXHCIFix](https://github.com/RattletraPM/GUX-RyzenXHCIFix)
+Can fix AMD USB stalls on *laptops*.
+### ~~XLNCUSBFIX~~
+Couldn't track down the download
+### [XHCIunsupported](https://github.com/RehabMan/OS-X-USB-Inject-All)
+(Please someone fill this out)
+### [USB3 legacy](https://applelife.ru/threads/nastrojka-usb-v-10-11-i-novee.627190/page-3#post-537459)
+(Please someone fill this out)
 
 # Audio
 
