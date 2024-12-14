@@ -41,6 +41,10 @@ has_toc: false
 
 - Nearly any SATA optical drive will work, though you may need to use a specific SMBIOS.
 
+# Peripherals
+
+- Whatever you got, it will work.
+
 <p align="center">You can continue below using the Nav Bar.</p>
 
 <h2 align="center">
