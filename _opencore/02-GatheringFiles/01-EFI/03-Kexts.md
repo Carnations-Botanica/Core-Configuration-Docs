@@ -153,50 +153,50 @@ If you want to use an eGPU, you should take a look at [Kryptonite](https://githu
 # Other CPU related kexts
 
 ## General
-### [RestrictEvents](https://github.com/acidanthera/RestrictEvents)
+### [RestrictEvents](https://github.com/acidanthera/RestrictEvents){:target="_blank"}
 Various patches for MacOS.\
 <small>Not really CPU related, but should fit best in this category. </small>
-### [AppleMCEReporterDisabler](https://github.com/acidanthera/bugtracker/files/3703498/AppleMCEReporterDisabler.kext.zip)
+### [AppleMCEReporterDisabler](https://github.com/acidanthera/bugtracker/files/3703498/AppleMCEReporterDisabler.kext.zip){:target="_blank"}
 Disables AppleMCE, which can cause panics
-### [CryptexFixup](https://github.com/acidanthera/CryptexFixup)
+### [CryptexFixup](https://github.com/acidanthera/CryptexFixup){:target="_blank"}
 Adds AVX2.0 instructions to CPUs without, has caveats.
-### [HWPEnable](https://github.com/benbaker76/HWPEnable)
-Whatever this is
-### [Telemetrap](https://forums.macrumors.com/attachments/telemetrap-0-22-zip.913289/)
+### [HWPEnable](https://github.com/benbaker76/HWPEnable){:target="_blank"}
+Whatever this is.
+### [Telemetrap](https://forums.macrumors.com/attachments/telemetrap-0-22-zip.913289/){:target="_blank"}
 Makes sure telemetry.plugin doesn't run, needed for SSE4.1 CPUs.
 ### [VoodooTSCSync](https://github.com/RehabMan/VoodooTSCSync)
 (Someone please fill this in)
-### [MouSSE](https://forums.macrumors.com/threads/mp3-1-others-sse-4-2-emulation-to-enable-amd-metal-driver.2206682/)
+### [MouSSE](https://forums.macrumors.com/threads/mp3-1-others-sse-4-2-emulation-to-enable-amd-metal-driver.2206682/){:target="_blank"}
 Translates SSE4.2 instructions to SSE4.1.
-### [ForgedInvariant](https://github.com/ChefKissInc/ForgedInvariant)
+### [ForgedInvariant](https://github.com/ChefKissInc/ForgedInvariant){:target="_blank"}
 Syncs TSC on AMD and Intel.
 
 ## Intel
-### [CPUTopologyRebuild](https://github.com/b00t0x/CpuTopologyRebuild)
+### [CPUTopologyRebuild](https://github.com/b00t0x/CpuTopologyRebuild){:target="_blank"}
 An experimental Lilu plugin that optimizes Alder Lake / Raptor Lake's heterogeneous core configuration.
-### [CPUTscSync](https://github.com/acidanthera/CpuTscSync)
+### [CPUTscSync](https://github.com/acidanthera/CpuTscSync){:target="_blank"}
 A Lilu plugin, combining functionality of VoodooTSCSync and disabling xcpm_urgency if TSC is not in sync. It should solve some kernel panics after wake.
-### [CPUFriend](https://github.com/acidanthera/CPUFriend)
+### [CPUFriend](https://github.com/acidanthera/CPUFriend){:target="_blank"}
 A Lilu plug-in for dynamic power management data injection.
 
 ## AMD
-### [Seey6's CPUTSCSync](https://github.com/Seey6/CpuTscSync)
+### [Seey6's CPUTSCSync](https://github.com/Seey6/CpuTscSync){:target="_blank"}
 CPU TSC Sync on AMD. Can fix sleep issues.
 
 # USB
-### [USBMap](https://github.com/corpnewt/USBMap)
+### [USBMap](https://github.com/corpnewt/USBMap){:target="_blank"}
 USB Mapping for MacOS
-### [USBToolBox](https://github.com/USBToolBox/kext)
-USBToolBox kext. Should be paired with UTBMap made from [USBToolBox Tool](https://github.com/USBToolBox/tool)
-### [USBInjectAll](https://github.com/RehabMan/OS-X-USB-Inject-All)
+### [USBToolBox](https://github.com/USBToolBox/kext){:target="_blank"}
+USBToolBox kext. Should be paired with UTBMap made from [USBToolBox Tool](https://github.com/USBToolBox/tool){:target="_blank"}
+### [USBInjectAll](https://github.com/RehabMan/OS-X-USB-Inject-All){:target="_blank"}
 (Someone please fill this in)
-### [GUX-RyzenXHCIFix](https://github.com/RattletraPM/GUX-RyzenXHCIFix)
+### [GUX-RyzenXHCIFix](https://github.com/RattletraPM/GUX-RyzenXHCIFix){:target="_blank"}
 Can fix AMD USB stalls on *laptops*.
 ### ~~XLNCUSBFIX~~
 Couldn't track down the download
-### [XHCIunsupported](https://github.com/RehabMan/OS-X-USB-Inject-All)
+### [XHCIunsupported](https://github.com/RehabMan/OS-X-USB-Inject-All){:target="_blank"}
 (Please someone fill this out)
-### [USB3 legacy](https://applelife.ru/threads/nastrojka-usb-v-10-11-i-novee.627190/page-3#post-537459)
+### [USB3 legacy](https://applelife.ru/threads/nastrojka-usb-v-10-11-i-novee.627190/page-3#post-537459){:target="_blank"}
 (Please someone fill this out)
 
 # Audio
@@ -254,16 +254,16 @@ Adds support for (formerly Broadcom) NetXtreme II server-grade network cards.
 
 ## WiFi
 
-### Broadcom
-- BRCMFixup
-- BRCMPatchRAM
+## Broadcom
+### BRCMFixup
+### BRCMPatchRAM
 
-### Intel
-- OpenIntelWireless
+## Intel
+### OpenIntelWireless
 
-### Qualcom
-- ATH9K
-- Atheros40 (Mojave+)
+## Qualcom
+### ATH9K
+### Atheros40 (Mojave+)
 
 ## Other networking kexts
 Wireless USB BigSur Adapter https://github.com/chris1111/Wireless-USB-Big-Sur-Adapter
@@ -280,13 +280,13 @@ NVMeFix is a set of patches designed to improve the compatibility of non-Apple N
 
 ## SATA
 
-## [CtlnaAHCIPort](https://github.com/dortania/OpenCore-Install-Guide/blob/master/extra-files/CtlnaAHCIPort.kext.zip){:target="_blank"}
+### [CtlnaAHCIPort](https://github.com/dortania/OpenCore-Install-Guide/blob/master/extra-files/CtlnaAHCIPort.kext.zip){:target="_blank"}
 Just as Sata-unsupported, this kext adds a variety of SATA controllers. Note that this kext contains needed binaries for some entirely unsupported controllers - if SATA-unsupported does not work on your system, you may want to try this kext.
 
-## [SATA-unsupported](https://github.com/RehabMan/hack-tools/tree/master/kexts/SATA-unsupported.kext){:target="_blank"}
+### [SATA-unsupported](https://github.com/RehabMan/hack-tools/tree/master/kexts/SATA-unsupported.kext){:target="_blank"}
 A codeless kext adding a variety of SATA personalities to macOS.
 
-## [RyzenSata](https://github.com/Carnations-Botanica/RyzenSata){:target="_blank"}
+### [RyzenSata](https://github.com/Carnations-Botanica/RyzenSata){:target="_blank"}
 Similar to SATA-unsupported, this kext adds SATA personalities to macOS. Corresponding SATA personalities are often found on AMD laptops. If you own an AMD laptop with a SATA interface, you will probably benefit from this kext.
 
 ## IDE/ATA
@@ -301,19 +301,29 @@ ATA injector?
 Yes, for real. Theres a [floppy kext](https://github.com/Goldfish64/VoodooFloppy){:target="_blank"}. We don't know if the kext works - please let us know if you seriously have a floppy drive.
 
 ## Card readers
-- Sinetek-rtsx
-- VoodooSDHC
-- RealtekCardReader
-- EmeraldSDHC
+### [Sinetek-rtsx](https://github.com/cholonam/Sinetek-rtsx){:target="_blank"}
+(Someone please fill this in)
+### [VoodooSDHC](https://github.com/lvs1974/VoodooSDHCMod){:target="_blank"}
+(Someone please fill this in)
+### [RealtekCardReader](https://github.com/0xFireWolf/RealtekCardReader){:target="_blank"}
+Realtek SD card reader.
+### [EmeraldSDHC](https://github.com/acidanthera/EmeraldSDHC){:target="_blank"}
+Unstable SDHC card reading for MacOS. Doesn't support SD Cards yet.
 
 # Laptop specific kexts
 ## Sensor Data
-- SMCBatteryManager
-- ECEnabler
-- CrosEC
-- YogaSMC
-- SMCDellSensors
-- AsusSMC
+### [SMCBatteryManager](https://github.com/acidanthera/virtualsmc){:target="_blank"}
+Battery readings for MacOS.
+### [ECEnabler](https://github.com/1Revenger1/ECEnabler){:target="_blank"}
+Allows reading Embedded Controller fields over 1 byte long.
+### [CrosEC](https://github.com/Chromeintosh/CrosEC){:target="_blank"}
+Chromebook Battery readings?
+### [YogaSMC](https://github.com/zhen-zen/YogaSMC){:target="_blank"}
+Thinkpad and Ideapad readings.
+### [SMCDellSensors](https://github.com/acidanthera/virtualsmc){:target="_blank"}
+Dell specific sensors.
+### [AsusSMC](https://github.com/hieplpvip/AsusSMC){:target="_blank"}
+Adds support for Asus specific sensors and keys. Requires knowing DSDT patching.
 
 ## Input
 
