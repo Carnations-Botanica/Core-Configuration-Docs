@@ -28,6 +28,7 @@ has_toc: false
 {: .headsup }
 Be aware any supported iGPUs will still likely require the usual framebuffer patching within OpenCore for Acceleration to work, and will not work OOB. For now, we only care to know if your iGPU is confirmed to work, and can be configured later down the road.
 
+
 ## Ice Lake
 
 {: .note }
@@ -134,25 +135,25 @@ Ventura (13) dropped support for Skylake iGPUs. However, since Skylake and Kaby 
 | GMA 900 | Tiger (10.4) | Lion (10.7) | Partial support in 10.6 and 10.7<br> However acceleration issues are common. |
 | GMA X3100 | Tiger (10.4) | Lion (10.7) | Only Mobile models<br> (ie. 965 Express Chipset Family) |
 
-## Unsupported iGPUs
+## Unsupported iGPUs/ARC GPUs
 
 ### ARC Series
 
 | Card | Initial Support | Latest Support | Notes |
 | --- | --- | --- | --- |
-| A50 | None | None |  |
-| A40 | None | None |  |
-| A30M | None | None |  |
-| A770M | None | None |  |
-| A770 | None | None |  |
-| A730M | None | None |  |
-| A550M | None | None |  |
-| A370M | None | None |  |
-| A350M | None | None |  |
-| A750 | None | None |  |
-| A580 | None | None |  |
-| A380 | None | None |  |
-| A310 | None | None |  |
+| A50 | None | None | These will never be supported |
+| A40 | None | None | These will never be supported |
+| A30M | None | None | These will never be supported |
+| A770M | None | None | These will never be supported |
+| A770 | None | None | These will never be supported |
+| A730M | None | None | These will never be supported |
+| A550M | None | None | These will never be supported |
+| A370M | None | None | These will never be supported |
+| A350M | None | None | These will never be supported |
+| A750 | None | None | These will never be supported |
+| A580 | None | None | These will never be supported |
+| A380 | None | None | These will never be supported |
+| A310 | None | None | These will never be supported |
 
 ### Xe Series
 

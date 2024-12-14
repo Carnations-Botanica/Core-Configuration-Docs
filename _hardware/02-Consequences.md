@@ -54,10 +54,7 @@ Same thing here, whoever is knowledgable on Bluetooth, and its various limitatio
 <h2 align="center">Storage Related</h2>
 <br>
 
-{: .internalnote }
-For this, I wanted to note things like TRIM support, and example drives that would require NVMeFix or similar to EmeraldSDHC, pretty much cover basis of the types of storage and their range of support from OS X / macOS, don't have too much EXP on this either.
-
-<p align="center">Placeholder Text.</p>
+<p align="center">Using unsupported storage on a Hackintosh can lead to issues like improper drive recognition, lack of TRIM support, and reduced performance over time. Without proper patches or kexts, macOS may not detect the drive at all, or it may not function optimally, resulting in slower speeds and potential data loss. Unsupported storage requires extra troubleshooting and can make system stability unpredictable, leading to a less reliable Hackintosh experience.</p>
 
 <br>
 <h2 align="center">

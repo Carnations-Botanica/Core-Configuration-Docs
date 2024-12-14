@@ -27,7 +27,20 @@ has_toc: false
 <h2 align="center">An info dump of obscure hardware support</h2>
 <br>
 
-<p align="center">This section is currently a placeholder, and may even be removed!</p>
+<p align="center">This section includes hardware that doesn't fall into any of the previous categories.</p>
+
+# Fingerprint Sensors
+
+- Fingerprint sensors won't work in macOS.
+
+# Windows Hello Face Recognition (FaceID)
+
+- WFHR/FaceID won't work in macOS. There is chance that you could get your camera working, but that's it.
+
+# CD-DVD ROM
+
+- Nearly any SATA optical drive will work, though you may need to use a specific SMBIOS.
+
 <p align="center">You can continue below using the Nav Bar.</p>
 
 <h2 align="center">
