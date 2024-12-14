@@ -255,21 +255,30 @@ Adds support for (formerly Broadcom) NetXtreme II server-grade network cards.
 ## WiFi
 
 ## Broadcom
-### BRCMFixup
-### BRCMPatchRAM
+### [BRCMFixup](https://github.com/acidanthera/AirportBrcmFixup)
+(Someone please fill this in)
+### [BRCMPatchRAM](https://github.com/acidanthera/AirportBrcmFixup)
+USB Broadcom WiFi chips.
 
 ## Intel
-### OpenIntelWireless
+### [itlwm](https://github.com/OpenIntelWireless/itlwm)
+Intel WiFi.
 
 ## Qualcom
-### ATH9K
-### Atheros40 (Mojave+)
+### [ATH9KFixup](https://github.com/chunnann/ATH9KFixup)
+(Someone please fill this in)
+### [AirPortAtheros40 (Mojave+)](https://drive.google.com/file/d/1Xu9k5whKYG7yBkAVUKY53svtU3iGkjis/view?pli=1)
+(Someone please fill this in)
 
 ## Other networking kexts
-Wireless USB BigSur Adapter https://github.com/chris1111/Wireless-USB-Big-Sur-Adapter
-Mediatek https://github.com/chris1111/D-LinkUtility-Package
-Horndis https://github.com/Edwardwich/HoRNDIS
-NullEthernet https://github.com/RehabMan/OS-X-Null-Ethernet
+### [Wireless USB BigSur Adapter](https://github.com/chris1111/Wireless-USB-Big-Sur-Adapter)
+USB Realtek WiFi chips.
+### [Mediatek](https://github.com/chris1111/D-LinkUtility-Package)
+Mediatek USB WiFi chips.
+### [Horndis](https://github.com/Edwardwich/HoRNDIS)
+Android WiFi tethering.
+### [NullEthernet](https://github.com/RehabMan/OS-X-Null-Ethernet)
+Creates fake ethernet adaptor at en0 built-in. Generally used to fix iServices.
 
 # Storage kexts
 
