@@ -139,12 +139,12 @@ WhateverGreen supports OS X 10.6 Snow Leopard to macOS 15 Sequoia.
 ---
 
 ## [NootedRed](https://github.com/ChefKissInc/NootedRed){:target="_blank"}
-NootedRed provides support for Vega-based APUs. Oversimplified, it patches existing Vega drivers that exist for dGPUs. This is possible because APUs and dGPUs are designed very similarly. However, NootedRed comes with several issues that make smooth operation not always possible. Furthermore, the author of the kext does not accept issues anymore - you're on your own using this kext.
+NootedRed provides support for Vega-based APUs. Oversimplified, it patches existing Vega drivers that exist for dGPUs. This is possible because APUs and dGPUs are designed very similarly. However, NootedRed comes with several issues that make smooth operation not always possible.
 
 ---
 
 ## [NootRX](https://github.com/ChefKissInc/NootRX){:target="_blank"}
-NootRX is a kext providing patches for Navi21, -22 and -23 based GPUs. Just as NootedRed, NootRX comes with issues. WhateverGreen is able to provide patches for Navi21 and -23, NootRX is only necessary for Navi22. Just as for NootedRed, the author of the kext disabled the issue section - you're on your own using this kext.
+NootRX is a kext providing patches for Navi21, -22 and -23 based GPUs. Just as NootedRed, NootRX comes with issues. WhateverGreen is able to provide patches for Navi21 and -23, NootRX is only necessary for Navi22.
 
 {: .note }
 If you want to use an eGPU, you should take a look at [Kryptonite](https://github.com/mayankk2308/kryptonite?tab=readme-ov-file){:target="_blank"}. However, the further process of using this kext is not covered in this guide.
