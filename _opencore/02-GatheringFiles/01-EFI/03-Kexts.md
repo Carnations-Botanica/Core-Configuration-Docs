@@ -132,19 +132,19 @@ SMCRadeonSensors supports macOS 10.14 Mojave up to macOS 15 Sequoia.
 
 # **Graphics Related**
 
-## [WhateverGreen](https://github.com/acidanthera/WhateverGreen/){:target="_blank"}
+## [WhateverGreen](https://github.com/acidanthera/WhateverGreen){:target="_blank"}
 Whatevergreen (known years ago as NvidiaGraphicsFixup, IntelGraphicsFixup, IntelGraphicsDVMTFixup, CoreDisplayFixup and Shiki) provides a [range of patches and fixes](https://github.com/acidanthera/WhateverGreen/?tab=readme-ov-file#features) for GPUs from all manufacturers (ATI/AMD, Intel, Nvidia). The primary purpose of WhateverGreen is to address issues that arise when macOS does not natively support certain GPUs. Almost all GPUs (apart from completely unsupported cards as well as AMD APUs and Navi22) benfit from it. 
 WhateverGreen supports OS X 10.6 Snow Leopard to macOS 15 Sequoia.
 
 ---
 
 ## [NootedRed](https://github.com/ChefKissInc/NootedRed){:target="_blank"}
-NootedRed provides support for Vega-based APUs. Oversimplified, it patches existing Vega drivers that exist for dGPUs. This is possible because APUs and dGPUs are designed very similarly. However, NootedRed comes with several issues that make smooth operation not always possible. Furthermore, the author of the kext does not accept issues anymore - you're on your own using this kext.
+NootedRed provides support for Vega-based APUs. Oversimplified, it patches existing Vega drivers that exist for dGPUs. This is possible because APUs and dGPUs are designed very similarly. However, NootedRed comes with several issues that make smooth operation not always possible.
 
 ---
 
-## [NootRX](https://github.com/ChefKissInc/NootRXNootedRX){:target="_blank"}
-NootRX is a kext providing patches for Navi21, -22 and -23 based GPUs. Just as NootedRed, NootRX comes with issues. WhateverGreen is able to provide patches for Navi21 and -23, NootRX is only necessary for Navi22. Just as for NootedRed, the author of the kext disabled the issue section - you're on your own using this kext.
+## [NootRX](https://github.com/ChefKissInc/NootRX){:target="_blank"}
+NootRX is a kext providing patches for Navi21, -22 and -23 based GPUs. Just as NootedRed, NootRX comes with issues. WhateverGreen is able to provide patches for Navi21 and -23, NootRX is only necessary for Navi22.
 
 {: .note }
 If you want to use an eGPU, you should take a look at [Kryptonite](https://github.com/mayankk2308/kryptonite?tab=readme-ov-file){:target="_blank"}. However, the further process of using this kext is not covered in this guide.
@@ -153,32 +153,59 @@ If you want to use an eGPU, you should take a look at [Kryptonite](https://githu
 # Other CPU related kexts
 
 ## General
-- RestrictEvents -> Not really CPU related, but should fit best in this category
-- AppleMCEReporterDisabler
-- CryptexFixup
-- Whatever this is https://github.com/benbaker76/HWPEnable
-- telemetrap
-- VoodooTSCSync
-- MouSSE https://forums.macrumors.com/threads/mp3-1-others-sse-4-2-emulation-to-enable-amd-metal-driver.2206682/
+### [RestrictEvents](https://github.com/acidanthera/RestrictEvents){:target="_blank"}
+<small>Not really CPU related, but should fit best in this category. </small>
+
+Various patches for MacOS including disabling memory module replacement UI menu on `MacBookAir` SMBIOSes, disabling the PCI expansion view and RAM view on `MacPro7,1`, CPU brand sting for non Intel CPUs (forcable for Intel using `revcpu=1`), and disabling the disk uninitialised menu. 
+### [AppleMCEReporterDisabler](https://github.com/acidanthera/bugtracker/files/3703498/AppleMCEReporterDisabler.kext.zip){:target="_blank"}
+Codeless Kext that disables AppleMCEReporter.kext, which can cause panics on Monterey 12 beta 3 or beta 6 and above on AMD, and Catalina 10.15 on Intel Dual Socket. Only applies to SMBIOSes MacPro6,1, MacPro7,1 and iMacPro1,1.
+### [CryptexFixup](https://github.com/acidanthera/CryptexFixup){:target="_blank"}
+Adds AVX2.0 instructions to CPUs without it, has caveats such as Delta updates not working - they will use full updates instead, [Rapid Security Response Updates](https://support.apple.com/en-nz/guide/deployment/dep93ff7ea78/web) do not work, does not patch the graphics stack either (AMD GPUs will not work). This is because of Apple Silicon having a pre-AVX2.0 dyld shared cache, CryptexFixup simple forces this on x64. CPUs requiring this are:
+- Intel Ivy Bridge and older
+- AMD Bulldozer/Piledriver/Steamroller and older
+
+CPUs that have AVX2.0 natively:
+- Intel Haswell and newer
+- AMD Excavator/Ryzen and newer
+
+### [HWPEnable](https://github.com/benbaker76/HWPEnable){:target="_blank"}
+Whatever this is.
+### [Telemetrap](https://forums.macrumors.com/attachments/telemetrap-0-22-zip.913289/){:target="_blank"}
+Makes sure telemetry.plugin doesn't run, needed for SSE4.1 CPUs.
+### [VoodooTSCSync](https://github.com/RehabMan/VoodooTSCSync){:target="_blank"}
+(Someone please fill this in)
+### [MouSSE](https://gitlab.com/julianfairfax/macos-patcher/-/tree/main/resources/patch/AAAMouSSE.kext){:target="_blank"}
+Translates SSE4.2 instructions to SSE4.1.
+### [ForgedInvariant](https://github.com/ChefKissInc/ForgedInvariant){:target="_blank"}
+Syncs TSC (Time Stamp Counter) on AMD and Intel. Generally helps with overall lag, can fix sleep issues.
 
 ## Intel
-- CPUTopologyRebuild
-- CPUTscSync
-- CPUFriend
+### [CPUTopologyRebuild](https://github.com/b00t0x/CpuTopologyRebuild){:target="_blank"}
+An experimental Lilu plugin that optimizes Alder Lake / Raptor Lake's heterogeneous core configuration.
+### [CPUTscSync](https://github.com/acidanthera/CpuTscSync){:target="_blank"}
+A Lilu plugin, combining functionality of VoodooTSCSync and disabling xcpm_urgency if TSC is not in sync. It should solve some kernel panics after wake.
+### [CPUFriend](https://github.com/acidanthera/CPUFriend){:target="_blank"}
+A Lilu plug-in for dynamic power management data injection for Intel.
 
 ## AMD
-- Seey6's CPUTSCSync
-- 
+### [Seey6's CPUTSCSync](https://github.com/Seey6/CpuTscSync){:target="_blank"}
+CPU TSC Sync on AMD. Can fix sleep issues.
 
 # USB
-- USBMap
-- USBToolBox
-- USBInjectAll
-- GUX
-- RyzenGUX
-- XLNCUSBFIX
-- XHCIunsupported
-- USB3 legacy? https://applelife.ru/threads/nastrojka-usb-v-10-11-i-novee.627190/page-3#post-537459
+### [USBMap](https://github.com/corpnewt/USBMap){:target="_blank"}
+USB Mapping for MacOS
+### [USBToolBox](https://github.com/USBToolBox/kext){:target="_blank"}
+USBToolBox kext. Should be paired with UTBMap made from [USBToolBox Tool](https://github.com/USBToolBox/tool){:target="_blank"}
+### [USBInjectAll](https://github.com/RehabMan/OS-X-USB-Inject-All){:target="_blank"}
+(Someone please fill this in)
+### [GUX-RyzenXHCIFix](https://github.com/RattletraPM/GUX-RyzenXHCIFix){:target="_blank"}
+Can fix AMD USB stalls on specifically *laptops*. Disables other XHCI controllers.
+### ~~XLNCUSBFIX~~
+Couldn't track down the download
+### [XHCIunsupported](https://github.com/RehabMan/OS-X-USB-Inject-All){:target="_blank"}
+(Please someone fill this out)
+### [USB3 legacy](https://applelife.ru/threads/nastrojka-usb-v-10-11-i-novee.627190/page-3#post-537459){:target="_blank"}
+(Please someone fill this out)
 
 # Audio
 
@@ -235,22 +262,31 @@ Adds support for (formerly Broadcom) NetXtreme II server-grade network cards.
 
 ## WiFi
 
-### Broadcom
-- BRCMFixup
-- BRCMPatchRAM
+## Broadcom
+### [BRCMFixup](https://github.com/acidanthera/AirportBrcmFixup)
+(Someone please fill this in)
+### [BRCMPatchRAM](https://github.com/acidanthera/AirportBrcmFixup)
+USB Broadcom WiFi chips. (Don't know how to make this more detailed, it probably should be though)
 
-### Intel
-- OpenIntelWireless
+## Intel
+### [itlwm](https://github.com/OpenIntelWireless/itlwm)
+Intel WiFi. Airport Itlwm doesn't work on Sequoia as of now, Itlwm doesn't support Continuity. AirportItlwm has a chance of supporting them, but to not rely on it.
 
-### Qualcom
-- ATH9K
-- Atheros40 (Mojave+)
+## Qualcom
+### [ATH9KFixup](https://github.com/chunnann/ATH9KFixup)
+(Someone please fill this in)
+### [AirPortAtheros40 (Mojave+)](https://drive.google.com/file/d/1Xu9k5whKYG7yBkAVUKY53svtU3iGkjis/view?pli=1)
+(Someone please fill this in)
 
 ## Other networking kexts
-Wireless USB BigSur Adapter https://github.com/chris1111/Wireless-USB-Big-Sur-Adapter
-Mediatek https://github.com/chris1111/D-LinkUtility-Package
-Horndis https://github.com/Edwardwich/HoRNDIS
-NullEthernet https://github.com/RehabMan/OS-X-Null-Ethernet
+### [Wireless USB BigSur Adapter](https://github.com/chris1111/Wireless-USB-Big-Sur-Adapter)
+USB Realtek WiFi chips.
+### [Mediatek](https://github.com/chris1111/D-LinkUtility-Package)
+Mediatek USB WiFi chips.
+### [Horndis](https://github.com/Edwardwich/HoRNDIS)
+Android WiFi tethering.
+### [NullEthernet](https://github.com/RehabMan/OS-X-Null-Ethernet)
+Creates fake ethernet adaptor at en0 built-in. Generally used to fix iServices.
 
 # Storage kexts
 
@@ -261,13 +297,13 @@ NVMeFix is a set of patches designed to improve the compatibility of non-Apple N
 
 ## SATA
 
-## [CtlnaAHCIPort](https://github.com/dortania/OpenCore-Install-Guide/blob/master/extra-files/CtlnaAHCIPort.kext.zip){:target="_blank"}
+### [CtlnaAHCIPort](https://github.com/dortania/OpenCore-Install-Guide/blob/master/extra-files/CtlnaAHCIPort.kext.zip){:target="_blank"}
 Just as Sata-unsupported, this kext adds a variety of SATA controllers. Note that this kext contains needed binaries for some entirely unsupported controllers - if SATA-unsupported does not work on your system, you may want to try this kext.
 
-## [SATA-unsupported](https://github.com/RehabMan/hack-tools/tree/master/kexts/SATA-unsupported.kext){:target="_blank"}
+### [SATA-unsupported](https://github.com/RehabMan/hack-tools/tree/master/kexts/SATA-unsupported.kext){:target="_blank"}
 A codeless kext adding a variety of SATA personalities to macOS.
 
-## [RyzenSata](https://github.com/Carnations-Botanica/RyzenSata){:target="_blank"}
+### [RyzenSata](https://github.com/Carnations-Botanica/RyzenSata){:target="_blank"}
 Similar to SATA-unsupported, this kext adds SATA personalities to macOS. Corresponding SATA personalities are often found on AMD laptops. If you own an AMD laptop with a SATA interface, you will probably benefit from this kext.
 
 ## IDE/ATA
@@ -282,19 +318,29 @@ ATA injector?
 Yes, for real. Theres a [floppy kext](https://github.com/Goldfish64/VoodooFloppy){:target="_blank"}. We don't know if the kext works - please let us know if you seriously have a floppy drive.
 
 ## Card readers
-- Sinetek-rtsx
-- VoodooSDHC
-- RealtekCardReader
-- EmeraldSDHC
+### [Sinetek-rtsx](https://github.com/cholonam/Sinetek-rtsx){:target="_blank"}
+(Someone please fill this in)
+### [VoodooSDHC](https://github.com/lvs1974/VoodooSDHCMod){:target="_blank"}
+(Someone please fill this in)
+### [RealtekCardReader](https://github.com/0xFireWolf/RealtekCardReader){:target="_blank"}
+Realtek SD card reader.
+### [EmeraldSDHC](https://github.com/acidanthera/EmeraldSDHC){:target="_blank"}
+Unstable SDHC card reading for MacOS. Doesn't support SD Cards yet.
 
 # Laptop specific kexts
 ## Sensor Data
-- SMCBatteryManager
-- ECEnabler
-- CrosEC
-- YogaSMC
-- SMCDellSensors
-- AsusSMC
+### [SMCBatteryManager](https://github.com/acidanthera/virtualsmc){:target="_blank"}
+Battery readings for MacOS.
+### [ECEnabler](https://github.com/1Revenger1/ECEnabler){:target="_blank"}
+Allows reading Embedded Controller fields over 1 byte long.
+### [CrosEC](https://github.com/Chromeintosh/CrosEC){:target="_blank"}
+Chromebook Battery readings?
+### [YogaSMC](https://github.com/zhen-zen/YogaSMC){:target="_blank"}
+Thinkpad and Ideapad sensor readings.
+### [SMCDellSensors](https://github.com/acidanthera/virtualsmc){:target="_blank"}
+Dell specific sensors.
+### [AsusSMC](https://github.com/hieplpvip/AsusSMC){:target="_blank"}
+Adds support for Asus specific sensors and keys. Requires knowing DSDT patching.
 
 ## Input
 
