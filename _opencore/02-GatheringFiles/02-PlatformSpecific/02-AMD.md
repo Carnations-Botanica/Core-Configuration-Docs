@@ -51,8 +51,8 @@ This sections is currently a work in progress, and information here may be incor
 # Kexts
 
 | Kext Name | Notes |
-| AppleMCEReporterDisabler | Only use on Monterey (12) beta 6 and newer, beta 3 this is also required |
-| GUX-RyzenXHCIFix/GenericUSBXHCI | Generally required on Ryzen Laptops with a 4xxx series or later |
+| AppleMCEReporterDisabler | Only use on Monterey (12) beta 6 and newer, beta 3 this is also required, when using SMBIOSes MacPro6,1, MacPro7,1 or iMacPro1,1. |
+| GUX-RyzenXHCIFix/GenericUSBXHCI | Generally required on Ryzen Laptops with a 4xxx CPU series or later. |
 | USBMap/UTBMap and USBToolBox | Rarely can cause stalls booting. Recommended to use the `Native Classes` option in USBToolBox to get a USBMap that doesn't require USBToolBox.kext. |
 
 # Tools

@@ -154,22 +154,30 @@ If you want to use an eGPU, you should take a look at [Kryptonite](https://githu
 
 ## General
 ### [RestrictEvents](https://github.com/acidanthera/RestrictEvents){:target="_blank"}
-Various patches for MacOS.\
 <small>Not really CPU related, but should fit best in this category. </small>
+
+Various patches for MacOS including disabling memory module replacement UI menu on `MacBookAir` SMBIOSes, disabling the PCI expansion view and RAM view on `MacPro7,1`, CPU brand sting for non Intel CPUs (forcable for Intel using `revcpu=1`), and disabling the disk uninitialised menu. 
 ### [AppleMCEReporterDisabler](https://github.com/acidanthera/bugtracker/files/3703498/AppleMCEReporterDisabler.kext.zip){:target="_blank"}
-Disables AppleMCE, which can cause panics
+Codeless Kext that disables AppleMCEReporter.kext, which can cause panics on Monterey 12 beta 3 or beta 6 and above on AMD, and Catalina 10.15 on Intel Dual Socket. Only applies to SMBIOSes MacPro6,1, MacPro7,1 and iMacPro1,1.
 ### [CryptexFixup](https://github.com/acidanthera/CryptexFixup){:target="_blank"}
-Adds AVX2.0 instructions to CPUs without, has caveats.
+Adds AVX2.0 instructions to CPUs without it, has caveats such as Delta updates not working - they will use full updates instead, [Rapid Security Response Updates](https://support.apple.com/en-nz/guide/deployment/dep93ff7ea78/web) do not work, does not patch the graphics stack either (AMD GPUs will not work). This is because of Apple Silicon having a pre-AVX2.0 dyld shared cache, CryptexFixup simple forces this on x64. CPUs requiring this are:
+- Intel Ivy Bridge and older
+- AMD Bulldozer/Piledriver/Steamroller and older
+
+CPUs that have AVX2.0 natively:
+- Intel Haswell and newer
+- AMD Excavator/Ryzen and newer
+
 ### [HWPEnable](https://github.com/benbaker76/HWPEnable){:target="_blank"}
 Whatever this is.
 ### [Telemetrap](https://forums.macrumors.com/attachments/telemetrap-0-22-zip.913289/){:target="_blank"}
 Makes sure telemetry.plugin doesn't run, needed for SSE4.1 CPUs.
-### [VoodooTSCSync](https://github.com/RehabMan/VoodooTSCSync)
+### [VoodooTSCSync](https://github.com/RehabMan/VoodooTSCSync){:target="_blank"}
 (Someone please fill this in)
-### [MouSSE](https://forums.macrumors.com/threads/mp3-1-others-sse-4-2-emulation-to-enable-amd-metal-driver.2206682/){:target="_blank"}
+### [MouSSE](https://gitlab.com/julianfairfax/macos-patcher/-/tree/main/resources/patch/AAAMouSSE.kext){:target="_blank"}
 Translates SSE4.2 instructions to SSE4.1.
 ### [ForgedInvariant](https://github.com/ChefKissInc/ForgedInvariant){:target="_blank"}
-Syncs TSC on AMD and Intel.
+Syncs TSC (Time Stamp Counter) on AMD and Intel. Generally helps with overall lag, can fix sleep issues.
 
 ## Intel
 ### [CPUTopologyRebuild](https://github.com/b00t0x/CpuTopologyRebuild){:target="_blank"}
@@ -177,7 +185,7 @@ An experimental Lilu plugin that optimizes Alder Lake / Raptor Lake's heterogene
 ### [CPUTscSync](https://github.com/acidanthera/CpuTscSync){:target="_blank"}
 A Lilu plugin, combining functionality of VoodooTSCSync and disabling xcpm_urgency if TSC is not in sync. It should solve some kernel panics after wake.
 ### [CPUFriend](https://github.com/acidanthera/CPUFriend){:target="_blank"}
-A Lilu plug-in for dynamic power management data injection.
+A Lilu plug-in for dynamic power management data injection for Intel.
 
 ## AMD
 ### [Seey6's CPUTSCSync](https://github.com/Seey6/CpuTscSync){:target="_blank"}
@@ -191,7 +199,7 @@ USBToolBox kext. Should be paired with UTBMap made from [USBToolBox Tool](https:
 ### [USBInjectAll](https://github.com/RehabMan/OS-X-USB-Inject-All){:target="_blank"}
 (Someone please fill this in)
 ### [GUX-RyzenXHCIFix](https://github.com/RattletraPM/GUX-RyzenXHCIFix){:target="_blank"}
-Can fix AMD USB stalls on *laptops*.
+Can fix AMD USB stalls on specifically *laptops*. Disables other XHCI controllers.
 ### ~~XLNCUSBFIX~~
 Couldn't track down the download
 ### [XHCIunsupported](https://github.com/RehabMan/OS-X-USB-Inject-All){:target="_blank"}
@@ -258,11 +266,11 @@ Adds support for (formerly Broadcom) NetXtreme II server-grade network cards.
 ### [BRCMFixup](https://github.com/acidanthera/AirportBrcmFixup)
 (Someone please fill this in)
 ### [BRCMPatchRAM](https://github.com/acidanthera/AirportBrcmFixup)
-USB Broadcom WiFi chips.
+USB Broadcom WiFi chips. (Don't know how to make this more detailed, it probably should be though)
 
 ## Intel
 ### [itlwm](https://github.com/OpenIntelWireless/itlwm)
-Intel WiFi.
+Intel WiFi. Airport Itlwm doesn't work on Sequoia as of now, Itlwm doesn't support Continuity. AirportItlwm has a chance of supporting them, but to not rely on it.
 
 ## Qualcom
 ### [ATH9KFixup](https://github.com/chunnann/ATH9KFixup)
@@ -328,7 +336,7 @@ Allows reading Embedded Controller fields over 1 byte long.
 ### [CrosEC](https://github.com/Chromeintosh/CrosEC){:target="_blank"}
 Chromebook Battery readings?
 ### [YogaSMC](https://github.com/zhen-zen/YogaSMC){:target="_blank"}
-Thinkpad and Ideapad readings.
+Thinkpad and Ideapad sensor readings.
 ### [SMCDellSensors](https://github.com/acidanthera/virtualsmc){:target="_blank"}
 Dell specific sensors.
 ### [AsusSMC](https://github.com/hieplpvip/AsusSMC){:target="_blank"}
