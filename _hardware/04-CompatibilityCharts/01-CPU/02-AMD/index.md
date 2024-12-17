@@ -245,6 +245,45 @@ Still missing older than Ryzen data such as Bulldozer, Jaguar, and Puma
 | PRO 1200 | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
 | 1200 | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
 
+## FX (Bulldozer)
+
+| Name | Initial Support | Latest Support | Notes |
+| --- | --- | --- | --- |
+| FX-4100 | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+| FX-4130 | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+| FX-4150 | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+| FX-4170 | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+| FX-6100 | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+| FX-6120 | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+| FX-6130 | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+| FX-6200 | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+| FX-8100 | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+| FX-8120 | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+| FX-8140 | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+| FX-8150 | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+
+## FX (Piledriver)
+
+| Name | Initial Support | Latest Support | Notes |
+| --- | --- | --- | --- |
+| FX-4300 | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+| FX-4320 | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+| FX-4350 | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+| FX-6300 | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+| FX-6330 BE | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+| FX-6350 | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+| FX-8300 | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+| FX-8310 | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+| FX-8320E | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+| FX-8320 | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+| FX-8350 | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+| FX-8370E | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+| FX-8370 | High Sierra (10.13) | Sequoia (15)| Requires a dGPU |
+| FX-9370 | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+| FX-9590 | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+
+
+
 <h2 align="center">
   <br>
   <div>
