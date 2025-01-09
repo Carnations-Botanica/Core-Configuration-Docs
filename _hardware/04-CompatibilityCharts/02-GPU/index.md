@@ -39,7 +39,7 @@ has_toc: false
 <br>
 
 {: .warning }
-If your card falls under the Hopper, Ada Lovelace, Ampere or Turing generations of NVIDIA RTX, your card is completely unsupported. Your options are using a supported Intel iGPU, or purchasing an AMD dedicated Graphics Card if you are on an AMD CPU. OpenCore Legacy Patcher will not solve this issue, RTX has never had support.
+If your card falls under the Hopper (Datacenter GPUs), Blackwell (RTX 50xx), Ada Lovelace (RTX 40xx), Ampere (RTX 30xx) or Turing (RTX 20xx) generations of NVIDIA RTX, your card is completely unsupported. Your options are using a supported Intel iGPU, or purchasing an AMD dedicated Graphics Card if you are on an AMD CPU. OpenCore Legacy Patcher will not solve this issue, RTX has never had support.
 
 {: .important }
 The Intel iGPU chart page is currently a work in progress, and information may be incorrect. If you seem to spot an error or have better information, please feel free to make a pull request for the Intel Support Chart page! Intel experts needed for validity of Initial and Latest support. This note should go away sooner or later.

@@ -29,6 +29,9 @@ has_toc: false
 {: .internalnote }
 This page still requires the macrecovery img on the top
 
+{: .internalnote }
+Screenshots should be changed from macOS host to Windows host, so it would be easier to follow for new users
+
 
 You can use macrecovery.py to fetch files for recoveryOS, which can be used to install macOS using the online method. This script allows you to download the necessary files from Apple's servers for creating a bootable macOS installation.
 

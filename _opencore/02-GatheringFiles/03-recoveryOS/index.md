@@ -33,6 +33,9 @@ has_toc: false
   <img width="650" height="200" src="../../../../assets/Headers/Header-FetchingrOS.png">
 </p>
 
+{: .internalnote }
+This page requires an additional update
+
 <h2 align="center">Placeholder Information</h2>
 
 <h4 align="center">This page is a stub temporarily, but this page should:</h4>
@@ -43,6 +46,15 @@ has_toc: false
 2. Help the user understand why we are using recoveryOS, and let legacy OS X users who cannot use recoveryOS, how to go about things for that, and essentially have them skip this section.
 
 3. Lightly touch on the two options below for getting recoveryOS, they are practically the same as they're both wrappers of macrecovery from inside of OpenCorePkg
+
+## Why are we using recoveryOS ?
+The recoveryOS is a lightweight operating system provided by Apple that helps users repair their macOS installations, recover lost files, or **reinstall macOS**. By using it, we can 'trick' the OS into thinking that macOS was already installed on this PC, allowing us to have it 'reinstall' macOS for us, i.e., fetch it from the official Apple servers. recoveryOS can also be helpful for executing certain commands, such as disabling SIP (**S**ystem **I**ntegrity **P**rotection)...
+
+## Note for legacy OS X users
+
+
+
+
 
 <h2 align="center">
   <br>
