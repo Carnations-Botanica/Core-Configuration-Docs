@@ -322,10 +322,10 @@ VoodooRMI - 10.10+
 
 ### I2C:
 VoodooI2C - 10.11+ with anyone of the following satellites
- - Precision/HID Multitouch: VoodooI2CHID
+ - Precision/HID Multitouch (ELAN1200 and above): VoodooI2CHID
  - Synaptics: VoodooRMI
  - Alps: AlpsHID
- - Elan: VoodooI2CElan
+ - Elan (below ELAN1200): VoodooI2CElan
  - AtmelMXT Touchpads: VoodooI2CAtmelMXT
  - FTE: VoodooI2CFTE
 
