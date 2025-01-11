@@ -66,7 +66,7 @@ Move the ``EFI`` folder that exists within the architecture of choice, and drop 
 
 <br>
 <p align="center">
-  <img width="100%" height="100%" src="../../../assets/OpenCore/OpenCoreEFIToUSBInitial.png">
+  <img width="100%" height="100%" src="../../../assets/OpenCore/EFIToUSBInitial.png">
   <p align="center"><i>LEFT: OpenCore ZIP opened in X64 folder, RIGHT: Root of Freshly formatted USB stick.</i></p>
 </p>
 
@@ -94,7 +94,7 @@ Now, you'll need to quickly browse for ``Sample.plist`` within ``Docs/`` folder 
 
 <br>
 <p align="center">
-  <img width="100%" height="100%" src="../../../assets/OpenCore/OpenCoreZIPSampleHIghlighted.png" alt="">
+  <img width="100%" height="100%" src="../../../assets/OpenCore/ZIPSampleHIghlighted.png" alt="">
 </p>
 <br>
 
@@ -102,7 +102,7 @@ Copy and paste this ``Sample.plist`` onto ``USB/EFI/OC/Sample.plist`` like so:
 
 <br>
 <p align="center">
-  <img width="100%" height="100%" src="../../../assets/OpenCore/OpenCoreUSBSampleInitial.png" alt="">
+  <img width="100%" height="100%" src="../../../assets/OpenCore/USBSampleInitial.png" alt="">
 </p>
 <br>
 

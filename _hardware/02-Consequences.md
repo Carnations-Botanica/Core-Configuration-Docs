@@ -29,7 +29,7 @@ has_toc: false
 <h2 align="center">Graphics Related</h2>
 <br>
 <div align="center">
-<a href=""><img src="../../assets/HardwareLimitations/HighSierraNoGPUAccel.gif" alt=""></a>
+<a href=""><img src="../../assets/Carnations/HighSierraNoGPUAccel.gif" alt=""></a>
 </div>
 <p align="center">The most important and absolutely required aspect is a supported Graphics Processing Unit. When you run the Mac operating system without a properly supported graphics card, you are running the entire OS in VESA / VGA mode. This means you have 0 graphics acceleration, it is being done via CPU rendering, which as you can see above, is a non usable experience. Imagine if your Windows PC did not have a graphics card, that's basically what it is to OS X / macOS. If your GPU/iGPU is not in the support chart, you will basically be using the system as if no Graphics Processing Unit exists at all. The Mac operating system heavily relies on a GPU to properly use, because every Mac has always <i>had</i> a GPU that worked (iGPU), and makes heavy use of it for things like Drop Shadows, Gaussian Blur, Dock Transparency, Minimizing/Maximizing animations, and other Aqua effects. The experience is much worse than non accelerated Windows, and is considered to be unusable in this state.</p>
 

@@ -46,7 +46,7 @@ You can also replace ``OpenHfsPlus.efi`` with the proprietary HFS+ Driver from A
 
 ``OpenRuntime.efi`` is not optional. It is required for proper OpenCore injection.
 
-The rest of this page documents all known Drivers and their purpose for safe keeping.
+**The rest of this page documents all known Drivers and their purpose for safe keeping.**
 
 <h2 align="center">
   <br>
@@ -59,7 +59,8 @@ The rest of this page documents all known Drivers and their purpose for safe kee
 
 <br>
 
-# **Drivers provided in OpenCorePkg**
+<h2 align="center">Drivers provided in OpenCorePkg</h2>
+<br>
 
 | Driver | Purpose | Requirement |
 | ArpDxe.efi | Networking protocol driver | <span style="color: #ff4d4f;">No</span> |
@@ -83,7 +84,7 @@ The rest of this page documents all known Drivers and their purpose for safe kee
 | OpenLegacyBoot.efi | Used to boot legacy OS from Pre-UEFI systems | <span style="color: #ff4d4f;">No</span> |
 | OpenLinuxBoot.efi | Used to allow dual-booting Linux through OpenCore<br>Do not add this for initial installation. | <span style="color: #ff4d4f;">No</span> |
 | OpenNtfsDxe.efi | Driver to read NTFS drives<br> | <span style="color: #ff4d4f;">No</span> |
-| OpenPartitionDxe.efi | Required to boot recovery on OS X 10.7 through 10.9.<br>Not required for OS X 10.10, Yosemite and newer. | <span style="color: #ffab52;">Conditional</span> |
+| OpenPartitionDxe.efi | Required to boot recovery on OS X 10.7 through 10.9.<br>Not required for OS X Yosemite (10.10) and newer. | <span style="color: #ffab52;">Conditional</span> |
 | OpenRuntime.efi | Replacement for [AptioMemoryFix.efi](https://github.com/acidanthera/AptioFixPkg)<br>An extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management. | <span style="color: #8ffc74;">Yes</span> |
 | OpenUsbKbDxe.efi | Used for OpenCore picker on legacy systems running DuetPkg. | <span style="color: #ff4d4f;">No</span> |
 | OpenVariableRuntimeDxe.efi | The emulated NVRAM driver. | <span style="color: #ff4d4f;">No</span> |
@@ -97,8 +98,8 @@ The rest of this page documents all known Drivers and their purpose for safe kee
 | UsbMouseDxe.efi | Used for enabling USB mouse on GUI interface provided by OpenCanopy.<br>Don't add this for initial installation. | <span style="color: #ff4d4f;">No</span> |
 | XhciDxe.efi | Responsible for managing the behavior of XHCI controller.<br>Don't add this unless your machine doesn't support UEFI.<br>It is for adding external USB 3 PCI card support. | <span style="color: #ff4d4f;">No</span> |
 
-
-# **Third-Party Drivers**
+<h2 align="center">Third-Party Drivers</h2>
+<br>
 
 | Driver | Purpose | Requirement |
 | [HfsPlus.efi](https://github.com/acidanthera/OcBinaryData/raw/refs/heads/master/Drivers/HfsPlus.efi) | Apple’s proprietary driver for HFS volumes. | <span style="color: #ffab52;">Conditional</span> |

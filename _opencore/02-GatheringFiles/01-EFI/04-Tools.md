@@ -34,9 +34,9 @@ has_toc: false
 <h2 align="center">These add functionality to OpenCore.</h2>
 <br>
 
-For our purposes of building a minimal and initial EFI, you can delete all included Tools. You may only ever need to add ``OpenShell.efi`` if a Helper, requests you to provide additional information.
+For our purposes of building a minimal and initial EFI, you can delete all included Tools. You may only ever need to add ``OpenShell.efi`` if a Helper, requests you to provide additional information about the system, that can be retrieved from OpenShell.
 
-The rest of this page documents all known Tools and their purpose for safe keeping.
+**The rest of this page documents all known Tools and their purpose for safe keeping.**
 
 <h2 align="center">
   <br>
