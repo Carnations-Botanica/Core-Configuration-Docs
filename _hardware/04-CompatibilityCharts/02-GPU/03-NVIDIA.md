@@ -28,6 +28,9 @@ has_toc: false
 {: .important }
 As previously mentioned, most of the cards listed can use OpenCore Legacy Patcher to get them running on Big Sur/Monterey and newer, although no support is provided for Hacs. Understand that the software is meant for real Macs, and that using OpenGL on Graphics Cards when the operating system relies on Metal, is simply not a longterm solution. You are on your own.
 
+{: .internalnote}
+Link the "hardware to avoid" page here
+
 ## Volta
 
 {: .note }
