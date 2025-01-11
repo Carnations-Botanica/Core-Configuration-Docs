@@ -317,7 +317,7 @@ ATA injector?
 -->
 
 ## Floppy
-Yes, for real. Theres a [floppy kext](https://github.com/Goldfish64/VoodooFloppy){:target="_blank"}. We don't know if the kext works - please let us know if you seriously have a floppy drive.
+Yes, for real. There's a [floppy kext](https://github.com/Goldfish64/VoodooFloppy){:target="_blank"}. We don't know if the kext works - please let us know if you seriously have a floppy drive.
 
 ## Card readers
 ### [Sinetek-rtsx](https://github.com/cholonam/Sinetek-rtsx){:target="_blank"}
@@ -368,10 +368,10 @@ VoodooRMI - 10.10+
 
 ### I2C:
 VoodooI2C - 10.11+ with anyone of the following satellites
- - Precision/HID Multitouch: VoodooI2CHID
+ - Precision/HID Multitouch (ELAN1200 and above): VoodooI2CHID
  - Synaptics: VoodooRMI
  - Alps: AlpsHID
- - Elan: VoodooI2CElan
+ - Elan (below ELAN1200): VoodooI2CElan
  - AtmelMXT Touchpads: VoodooI2CAtmelMXT
  - FTE: VoodooI2CFTE
 
