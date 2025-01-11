@@ -47,7 +47,7 @@ We need to pick through and remove non viable CPUs that would not make a working
 Still missing older than Ryzen data such as Bulldozer, Jaguar, and Puma 
 
 {: .note }
-> No Mac computer has ever shipped with an AMD CPU. Many programs use libraries or CPU features that AMD CPUs cannot handle. Programs affected include, but are not limited to: Discord Krisp, Adobe CC applications, Corel Painter, and others. Carnations Botanica has a Kernel Extension to resolve such issues via <a href="https://github.com/Carnations-Botanica/IntelMKLFixup/">IntelMKLFixup</a> by <a href="https://github.com/irlbunny">Kaitlyn (irlbunny)</a>
+> No Mac computer has ever shipped with an AMD CPU. Many programs use libraries or CPU features that AMD CPUs cannot handle. Programs affected include, but are not limited to: Discord Krisp, Adobe CC applications, Corel Painter, and others. Carnations Botanica has a Kernel Extension to resolve such issues via <a href="https://github.com/Carnations-Botanica/IntelMKLFixup/">IntelMKLFixup</a> by <a href="https://github.com/whatdahopper">Kaitlyn</a>
 >
 > AMD CPUs utilize SVM (Secure Virtual Machine), while Intel CPUs utilize VT-x (Virtualization Extensions) for programs like Docker, Virtualbox, VMware, Parallels, UTM, QEMU, and others. This means you will not have the ability to virtualize on your AMD-based Hac. This is currently an open issue. Possible workarounds are using older versions of software that utilize their own Hypervisor and not Apple HV / Hypervisor.framework, but this is unsafe.
 >

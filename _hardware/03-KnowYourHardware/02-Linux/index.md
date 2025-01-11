@@ -2,6 +2,7 @@
 layout: default
 title: Linux
 parent: Know Your hardware
+description: How to inspect and take note of the hardware present in your system on Linux.
 nav_order: 2
 has_children: false
 has_toc: false
@@ -41,7 +42,8 @@ has_toc: false
 The commands below should work regardless of the distribution of Linux you are using! There are multiple ways to get the same information, so if you are missing a package or a command does not work for you, try using the others in the intended section as a last resort.
 
 <br>
-<h3 align="center">Finding CPU Name</h3>
+<h2 id="finding-cpu-name" align="center">Finding CPU Name</h2>
+<br>
 
 <p align="center">The command below will probe /proc/cpuinfo and pretty print you the info you need</p>
 
@@ -56,7 +58,8 @@ AMD Ryzen 7 3700X 8-Core Processor
 ```
 
 <hr>
-<h3 align="center">Finding GPU Information</h3>
+<h2 id="finding-gpu-name" align="center">Finding GPU Information</h2>
+<br>
 
 <p align="center">We'll need to know a decent amount about our Graphics Processing Units. You may have more than one in your system, please note that Integrated and Dedicated GPUs both count and will appear, you will want to know plenty for both. We'll get the GPU Name, the Vendor and Device ID as well. In this section, you'll also get the PCI location of the GPU, in case you require it later to disable non supported GPUs from being visible in OS X / macOS</p>
 
@@ -77,7 +80,8 @@ lspci -nn | grep -i -E 'vga|3d|2d|display'
 - ``[1002:73ff]`` is the Vendor and Device ID data
 
 <hr>
-<h3 align="center">Finding Motherboard Name/Chipset</h3>
+<h2 id="finding-motherboard-chipset" align="center">Finding Motherboard Name/Chipset</h2>
+<br>
 
 <p align="center">This one is a bit trickier, as the information is not directly exposed in a command typically. Below we will start with the most universal option using Cat and reading from the filesystem.</p>
 
@@ -108,7 +112,8 @@ sudo dmidecode -t baseboard | grep -E 'Manufacturer|Product'
 ```
 
 <hr>
-<h3 align="center">Finding Storage Name/Model/Type</h3>
+<h2 id="finding-storage-name" align="center">Finding Storage Name/Model/Type</h2>
+<br>
 
 <p align="center">Most, if not all Linux installations come with lsblk. We can use it to specifically find out what type of storage we have, and the Product Name/Model of it.</p>
 
@@ -125,7 +130,8 @@ nvme2n1 Samsung SSD 980 1TB
 ```
 
 <hr>
-<h3 align="center">Finding Networking Controllers</h3>
+<h2 id="finding-nic-controller" align="center">Finding Networking Controllers</h2>
+<br>
 
 <p align="center">We can again leverage LSPCI to parse out information related to Networking, and all types available on your system.</p>
 
@@ -152,7 +158,8 @@ lspci -nn | grep -i -E 'ethernet|network'
 - ``[8086:2725]`` is the Vendor and Device ID data
 
 <hr>
-<h3 align="center">Finding Sound Controller and Codecs</h3>
+<h2 id="finding-audio-chipset" align="center">Finding Sound Controller and Codecs</h2>
+<br>
 
 <p align="center">Like the motherboard information, finding out the specific Codec in use by your Sound Controller is a tad tricky and may require additional packages but, we'll try the universal methods first.</p>
 
@@ -200,7 +207,8 @@ card 1: Generic [HD-Audio Generic], device 1: ALC1220 Analog [ALC1220 Analog]
 <p align="center">We're looking for something similar to <code>ALC1220</code>. That is the Codec.</p>
 
 <hr>
-<h3 align="center">Finding Input Devices and Type</h3>
+<h2 id="finding-input-types" align="center">Finding Input Devices and Type</h2>
+<br>
 
 {: .note }
 This section is specific to Mobile platforms, such as Laptops and Handhelds. If you are on a Desktop, you can safely skip this section of the instructions.

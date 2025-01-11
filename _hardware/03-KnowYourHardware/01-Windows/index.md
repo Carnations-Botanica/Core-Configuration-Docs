@@ -2,6 +2,7 @@
 layout: default
 title: Windows
 parent: Know Your hardware
+description: How to inspect and take note of the hardware present in your system on Windows.
 nav_order: 1
 has_children: false
 has_toc: false
@@ -75,7 +76,8 @@ In order to easily get the most information from our system, we'll want to use <
 <br>
 
 <hr>
-<h3 align="center">Finding CPU Name</h3>
+<h2 id="finding-cpu-name" align="center">Finding CPU Name</h2>
+<br>
 
 <p align="center">To begin, you can quickly find out your CPU Name and Codename with the System Summary that appeared. The upper left corner displays the following useful information:</p>
 
@@ -94,7 +96,8 @@ YourMachineName -> Motherboard -> SMBIOS DMI -> Processor
 </div>
 
 <hr>
-<h3 align="center">Finding GPU Information</h3>
+<h2 id="finding-gpu-name" align="center">Finding GPU Information</h2>
+<br>
 
 <p align="center">Using the System Summary we can see on the top right, is the GPU information we can note down.</p>
 
@@ -117,7 +120,8 @@ YourMachineName -> Video Adapter -> GPU Name
 <p align="center">This section also gives you the Vendor and Device ID if a Helper asks for that information, when verifying a specific non-specifically named GPU device like Radeon Graphics.</p>
 
 <hr>
-<h3 align="center">Finding Motherboard Name/Chipset</h3>
+<h2 id="finding-motherboard-chipset" align="center">Finding Motherboard Name/Chipset</h2>
+<br>
 
 <p align="center">Using the System Summary, in the middle top area you will get basic information on the motherboard.</p>
 
@@ -144,7 +148,8 @@ YourMachineName -> Motherboard -> SMBIOS DMI -> BIOS
 </div>
 
 <hr>
-<h3 align="center">Finding Storage Name/Model/Type</h3>
+<h2 id="finding-storage-name" align="center">Finding Storage Name/Model/Type</h2>
+<br>
 
 <p align="center">You can quickly find basic information such as the Interface Type and Name of your storage in the bottom right corner of the System Summary.</p>
 
@@ -171,7 +176,8 @@ YourMachineName -> Drives -> Type -> Name
 <p align="center">As you can see above, you can now write or copy/paste the PciRoot data.</p>
 
 <hr>
-<h3 align="center">Finding Networking Controllers</h3>
+<h2 id="finding-nic-controller" align="center">Finding Networking Controllers</h2>
+<br>
 
 <p align="center">You'll need to use the Full System Summary window to view this data.</p>
 
@@ -198,7 +204,8 @@ YourMachineName -> Network -> Device Name
 <p align="center">This is a great way to find out the Name, Chipset, and the PciRoot of your networking interface of choice.</p>
 
 <hr>
-<h3 align="center">Finding Sound Controller and Codecs</h3>
+<h2 id="finding-audio-chipset" align="center">Finding Sound Controller and Codecs</h2>
+<br>
 
 <p align="center">You'll need to use the Full System Summary window to view this data.</p>
 
@@ -210,16 +217,17 @@ YourMachineName -> Audio -> Audio Controller Name
 <a href=""><img src="../../../../assets/HWiNFO64/AudioChipsetCodec.png" alt=""></a>
 </div>
 
-<p align="center">In the above screenshot, we can see that this specific Audio Controller on the example motherboard, has an <code>ALC1220</code> Codec, and the Vendor/Device ID are visible to note down as well.</p>
+<p align="center">In the above screenshot, we can see that this specific Audio Controller on the example motherboard, the Vendor/Device ID are visible to note down, we will require the device-id later for calculating which AppleALC layout to use, and if we need to use AppleALC at all, or another kext for audio.</p>
 
 <div align="center">
 <a href=""><img src="../../../../assets/HWiNFO64/AudioChipsetCodecMobile.png" alt=""></a>
 </div>
 
-<p align="center">Here's a laptop in HWiNFO64, displaying the codec for the sound controller as <code>ALC285</code> for the motherboard and the Vendor/Device ID are visible to note down as well.</p>
+<p align="center">Here's a laptop in HWiNFO64 displaying the Vendor/Device ID, visible to note down as well.</p>
 
 <hr>
-<h3 align="center">Finding Input Devices and Type</h3>
+<h2 id="finding-input-types" align="center">Finding Input Devices and Type</h2>
+<br>
 
 {: .internalnote }
 This section is a placeholder outline for Contributors to fill in! Thank you for this, I have 0 laptop experience :P The plan here is to first find the Trackpad/Touchpad, and determine its type, then we move on and figure out Keyboard.
@@ -246,7 +254,7 @@ This section is specific to Mobile platforms, such as Laptops and Handhelds. If 
 <p align="center">To get started, begin by opening a new Device Manager window by right clicking your Start Menu and selecting <code>Device Manager</code> to get a new fresh window like so:</p>
 
 <div align="center">
-<a href=""><img src="../../../../assets/DeviceManager/FreshWindow.png" alt="Fresh Device Manager Window" style="width:60%;"></a>
+<a href=""><img src="../../../../assets/Microsoft/DeviceManager/FreshWindow.png" alt="Fresh Device Manager Window" style="width:60%;"></a>
 </div>
 
 <p align="center">We're going to want to click on <code>View -> Device by Connection</code>
@@ -254,14 +262,14 @@ This section is specific to Mobile platforms, such as Laptops and Handhelds. If 
 <div class="image-container">
   <div class="image-item">
     <h3>Dropdown Menu</h3>
-    <a href="../../../../assets/DeviceManager/ByConnectionDropDown.png" target="_blank">
-      <img src="../../../../assets/DeviceManager/ByConnectionDropDown.png" alt="Dropdown Menu">
+    <a href="../../../../assets/Microsoft/DeviceManager/ByConnectionDropDown.png" target="_blank">
+      <img src="../../../../assets/Microsoft/DeviceManager/ByConnectionDropDown.png" alt="Dropdown Menu">
     </a>
   </div>
   <div class="image-item">
     <h3>New Window Appearance</h3>
-    <a href="../../../../assets/DeviceManager/ByConnectionWindow.png" target="_blank">
-      <img src="../../../../assets/DeviceManager/ByConnectionWindow.png" alt="New Window Appearance">
+    <a href="../../../../assets/Microsoft/DeviceManager/ByConnectionWindow.png" target="_blank">
+      <img src="../../../../assets/Microsoft/DeviceManager/ByConnectionWindow.png" alt="New Window Appearance">
     </a>
   </div>
 </div>
@@ -269,19 +277,19 @@ This section is specific to Mobile platforms, such as Laptops and Handhelds. If 
 <p align="center">Placeholder Step.</p>
 
 <div align="center">
-<a href=""><img src="../../../../assets/DeviceManager/Placeholder.png" alt="[Missing Content] Placeholder"></a>
+<a href=""><img src="../../../../assets/Microsoft/DeviceManager/Placeholder.png" alt="[Missing Content] Placeholder"></a>
 </div>
 
 <p align="center">Placeholder Step.</p>
 
 <div align="center">
-<a href=""><img src="../../../../assets/DeviceManager/Placeholder.png" alt="[Missing Content] Placeholder"></a>
+<a href=""><img src="../../../../assets/Microsoft/DeviceManager/Placeholder.png" alt="[Missing Content] Placeholder"></a>
 </div>
 
 <p align="center">Placeholder Step.</p>
 
 <div align="center">
-<a href=""><img src="../../../../assets/DeviceManager/Placeholder.png" alt="[Missing Content] Placeholder"></a>
+<a href=""><img src="../../../../assets/Microsoft/DeviceManager/Placeholder.png" alt="[Missing Content] Placeholder"></a>
 </div>
 
 <hr>

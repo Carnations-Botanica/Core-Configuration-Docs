@@ -48,6 +48,32 @@ All notable changes to this project will be documented in this file. The format 
 
 ---
 
+## Rearrangement of Assets folder structure
+### Prerelease@CarnationsInternal
+#### By royalgraphx
+
+## [1.0.0~prerelease] - 2025-01-09
+
+### Added
+- Gallery Image for ROG Ally thanks to [@B-Waffles](https://github.com/B-Waffles).
+
+### Changed
+- General structure now follows Highest -> Lowest sorting, with nested folders for specific groups, people, brands, software, and etc.
+
+### Fixed
+- Screenshots are from Windows hosts, to easier transition users in to macOS later.
+
+### Deprecated
+- Loads of screenshots may no longer work, they need to be relinked. This commit is being pushed as a hotfix for the latest Ruby release. Screenshots will be fixed in the next commit.
+
+### Removed
+-
+
+### Security
+- This commit contains updates to Gem, Bundler, Ruby, and Jekyll.
+
+---
+
 ## Massive Local Changes
 ### Prerelease@restructure
 #### By royalgraphx
@@ -89,7 +115,7 @@ All notable changes to this project will be documented in this file. The format 
 ### Changed
 - Welcome Area pages
 - Hardware Area pages
-- Compatibility Charts, extended by request of [@irlbunny](https://github.com/irlbunny)
+- Compatibility Charts, extended by request of [@whatdahopper](https://github.com/whatdahopper)
 - Assets updated
 
 ### Fixed
