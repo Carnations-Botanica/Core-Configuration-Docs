@@ -33,16 +33,13 @@ has_toc: false
   <img width="650" height="200" src="../../../../assets/Headers/Header-FetchingrOS.png">
 </p>
 
-<h2 align="center">Placeholder Information</h2>
+This section will help you fetch the recoveryOS used for installing macOS.
 
-<h4 align="center">This page is a stub temporarily, but this page should:</h4>
-<br>
+# Why are we using recoveryOS ?
+The recoveryOS is a lightweight operating system provided by Apple that helps users repair their macOS installations, recover lost files, or **reinstall macOS**. By using it, we can 'trick' the OS into thinking that macOS was already installed on our PC, allowing us to have it 'reinstall' macOS for us, i.e., fetch it from the official Apple Servers. recoveryOS can also be helpful for executing certain commands, such as disabling SIP (**S**ystem **I**ntegrity **P**rotection)...
 
-1. Help the user fetch the recoveryOS ``.dmg`` for ``com.apple.recovery.boot``
-
-2. Help the user understand why we are using recoveryOS, and let legacy OS X users who cannot use recoveryOS, how to go about things for that, and essentially have them skip this section.
-
-3. Lightly touch on the two options below for getting recoveryOS, they are practically the same as they're both wrappers of macrecovery from inside of OpenCorePkg
+# macrecovery.py or gibMacRecovery
+`macrecovery.py` is the tool bundled with `OpenCorePkg` used to fetch recoveryOS from online servers. `gibMacRecovery` is a wrapper around macrecovery that automates most of the CLI switches, and may be easier to use, as it can automatically download Python and get the recoveryOS for you with less hustle. Check the following pages to see which one suits you best.
 
 <h2 align="center">
   <br>

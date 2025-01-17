@@ -35,8 +35,8 @@ Most iGPUs in the generation have support (except the unsupported "UHD Graphics"
 
 | Card | Initial Support | Latest Support | Notes |
 | --- | --- | --- | --- |
-| Iris Plus G7 | Catalina (10.15.4) | Sonoma (14) |  |
-| Iris Plus G4 | Catalina (10.15.4) | Sonoma (14) |  |
+| Iris Plus G7 | Catalina (10.15.4) | Sequoia (15) |  |
+| Iris Plus G4 | Catalina (10.15.4) | Sequoia (15) |  |
 
 ## Kaby/Coffee/Whiskey/Comet Lake (Refresh/Non-Refresh)
 
@@ -45,13 +45,13 @@ Most iGPUs are supported here (except the UHD 610 in the i5-10200H), though pay 
 
 | Card | Initial Support | Latest Support | Notes |
 | --- | --- | --- | --- |
-| Iris Plus 655 | High Sierra (10.13.6) | Sonoma (14) |  |
-| Iris Plus 645 | High Sierra (10.13.6) | Sonoma (14) |  |
-| Iris Plus 640 | High Sierra (10.13.6) | Sonoma (14) |  |
-| UHD 630 | High Sierra (10.13.6) | Sonoma (14) |  |
-| UHD 620 | High Sierra (10.13.6) | Sonoma (14) |  |
-| UHD 617 | High Sierra (10.13.6) | Sonoma (14) |  |
-| UHD 615 | High Sierra (10.13.6) | Sonoma (14) |  |
+| Iris Plus 655 | High Sierra (10.13.6) | Sequoia (15) |  |
+| Iris Plus 645 | High Sierra (10.13.6) | Sequoia (15) |  |
+| Iris Plus 640 | High Sierra (10.13.6) | Sequoia (15) |  |
+| UHD 630 | High Sierra (10.13.6) | Sequoia (15) |  |
+| UHD 620 | High Sierra (10.13.6) | Sequoia (15) |  |
+| UHD 617 | High Sierra (10.13.6) | Sequoia (15) |  |
+| UHD 615 | High Sierra (10.13.6) | Sequoia (15) |  |
 
 ## Skylake
 
