@@ -274,16 +274,16 @@ This section is specific to Mobile platforms, such as Laptops and Handhelds. If 
   </div>
 </div>
 
-<p align="center">Placeholder Step.</p>
+<p align="center">Now, let's find the I2C trackpad. Find something named or similarly named <code>I2C HID Device</code>. Open up the <code>Properties</code> menu and go to <code>Details -> Hardware IDs</code>. In the example picture, we have an <code>ELAN050B</code>, convert the 050B from Hex to decimal, which in this specific case is <code>1291</code>. In the example, we have an ELAN1291, <strong>note down whatever yours turns out to be.</strong></p>
 
 <div align="center">
-<a href=""><img src="../../../../assets/Microsoft/DeviceManager/Placeholder.png" alt="[Missing Content] Placeholder"></a>
+<a href=""><img src="../../../../assets/Microsoft/DeviceManager/I2CTrackpad.png" alt="General location of I2C trackpad, with example Hardware IDs"></a>
 </div>
 
-<p align="center">Placeholder Step.</p>
+<p align="center">This is fairly simple, if you have a <code>Standard PS/2 Keyboard</code>, in Device Manager, then you know it's just a normal PS/2 Keyboard.</p>
 
 <div align="center">
-<a href=""><img src="../../../../assets/Microsoft/DeviceManager/Placeholder.png" alt="[Missing Content] Placeholder"></a>
+<a href=""><img src="../../../../assets/Microsoft/DeviceManager/PS2Keyboard.png" alt="General location of PS/2 Keyboard"></a>
 </div>
 
 <p align="center">Placeholder Step.</p>
