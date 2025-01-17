@@ -48,6 +48,62 @@ All notable changes to this project will be documented in this file. The format 
 
 ---
 
+## Fetching recoveryOS section, additional minor changes
+### Vuxoni:Prerelease@CarnationsInternal
+#### By vuxoni
+
+## [1.0.0~prerelease] - 2025-01-14
+
+### Added
+- Fetching recoveryOS from ``macrecovery`` section added
+
+### Changed
+- NVIDIA GPU note updated with information for unsupported generation names to their numbers for easier reading
+- Intel iGPUs support various Max macOS versions
+
+### Fixed
+- macrecovery images changed to Windows host images
+- Fixed a typo, deleted formatting text in 2-macrecoverypy.md
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Security
+-
+
+---
+
+## Laptop Input
+### Sooly890:Prerelease@CarnationsInternal
+#### By sooly890
+
+## [1.0.0~prerelease] - 2025-01-11
+
+### Added
+- I2C trackpad, Standard PS/2 Keyboard detection instructions
+- I2C Input kexts information extended
+- Screenshots in assets for Windows and macOS
+
+### Changed
+-
+
+### Fixed
+-
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Security
+-
+
+---
+
 ## Rearrangement of Assets folder structure
 ### Prerelease@CarnationsInternal
 #### By royalgraphx
