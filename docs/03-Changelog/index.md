@@ -48,6 +48,32 @@ All notable changes to this project will be documented in this file. The format 
 
 ---
 
+## Update Laptop Input + Wi-Fi related Consequences
+### Prerelease@CarnationsInternal
+#### By royalgraphx
+
+## [1.0.0~prerelease] - 2025-01-17
+
+### Added
+- Added Wi-Fi related Consequences of non-supported hardware thanks to [@Nyabsi](https://github.com/nyabsi)
+
+### Changed
+- Collapsable Input Types for nicer page structure and easier legibility.
+
+### Fixed
+-
+
+### Deprecated
+-
+
+### Removed
+-
+
+### Security
+-
+
+---
+
 ## Fetching recoveryOS section, additional minor changes
 ### Vuxoni:Prerelease@CarnationsInternal
 #### By vuxoni

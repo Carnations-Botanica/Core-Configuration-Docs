@@ -229,11 +229,8 @@ YourMachineName -> Audio -> Audio Controller Name
 <h2 id="finding-input-types" align="center">Finding Input Devices and Type</h2>
 <br>
 
-{: .internalnote }
-This section is a placeholder outline for Contributors to fill in! Thank you for this, I have 0 laptop experience :P The plan here is to first find the Trackpad/Touchpad, and determine its type, then we move on and figure out Keyboard.
-
 {: .note }
-This section is specific to Mobile platforms, such as Laptops and Handhelds. If you are on a Desktop, you can safely skip this section of the instructions.
+This section is specific to Mobile platforms, such as Laptops and Handhelds. If you are on a Desktop, you can safely skip this section of the instructions as your input is USB based.
 
 <p align="center">When it comes to mobile devices such as Laptops and handheld devices, <b>you'll need to use Device Manager, not HWiNFO64</b> to determine the way that your input devices are wired to the machine.</p>
 
@@ -274,11 +271,71 @@ This section is specific to Mobile platforms, such as Laptops and Handhelds. If 
   </div>
 </div>
 
-<p align="center">Now, let's find the I2C trackpad. Find something named or similarly named <code>I2C HID Device</code>. Open up the <code>Properties</code> menu and go to <code>Details -> Hardware IDs</code>. In the example picture, we have an <code>ELAN050B</code>, convert the 050B from Hex to decimal, which in this specific case is <code>1291</code>. In the example, we have an ELAN1291, <strong>note down whatever yours turns out to be.</strong></p>
+<p align="center">You can now go through the expandable sections to determine if you have any of the following hardware.</p>
+
+<br>
+<details markdown="block">
+<summary>I2C</summary>
+
+<h2 align="center">Trackpad Device</h2>
+
+<p align="center">Let's try and find the Trackpad via I2C. Find something named or similarly named <code>I2C HID Device</code>. Open up the <code>Properties</code> menu and go to <code>Details -> Hardware IDs</code>. In the example picture, we have an <code>ELAN050B</code>, convert the 050B from Hex to decimal, which in this specific case is <code>1291</code>. In the example, we have an ELAN1291, <strong>note down whatever yours turns out to be.</strong></p>
 
 <div align="center">
-<a href=""><img src="../../../../assets/Microsoft/DeviceManager/I2CTrackpad.png" alt="General location of I2C trackpad, with example Hardware IDs"></a>
+<a href=""><img src="../../../../assets/Microsoft/DeviceManager/I2CTrackpad.png" alt="General location of I2C Trackpad, with example Hardware IDs"></a>
 </div>
+
+<h2 align="center">Keyboard Device</h2>
+
+<p align="center">Let's try and find the Keyboard via I2C.</p>
+
+<div align="center">
+<a href=""><img src="../../../../assets/Microsoft/DeviceManager/I2CKeyboard.png" alt="[Missing Content] General location of I2C Keyboard, with example Hardware IDs"></a>
+</div>
+
+</details>
+
+<br>
+<details markdown="block">
+<summary>SMBus</summary>
+
+<h2 align="center">Trackpad Device</h2>
+
+<p align="center">Let's try and find the Trackpad via SMBus.</p>
+
+<p align="center">Placeholder Text</p>
+
+<div align="center">
+<a href=""><img src="../../../../assets/Microsoft/DeviceManager/SMBusTrackpad.png" alt="[Missing Content] General location of SMBus Trackpad"></a>
+</div>
+
+<h2 align="center">Keyboard Device</h2>
+
+<p align="center">Let's try and find the Keyboard via SMBus.</p>
+
+<p align="center">Placeholder Text</p>
+
+<div align="center">
+<a href=""><img src="../../../../assets/Microsoft/DeviceManager/SMBusKeyboard.png" alt="[Missing Content] General location of SMBus Keyboard"></a>
+</div>
+
+</details>
+
+<br>
+<details markdown="block">
+<summary>PS/2</summary>
+
+<h2 align="center">Trackpad Device</h2>
+
+<p align="center">Let's try and find the Trackpad via PS/2.</p>
+
+<p align="center">Placeholder Text</p>
+
+<div align="center">
+<a href=""><img src="../../../../assets/Microsoft/DeviceManager/PS2Trackpad.png" alt="[Missing Content] General location of PS/2 Trackpad"></a>
+</div>
+
+<h2 align="center">Keyboard Device</h2>
 
 <p align="center">This is fairly simple, if you have a <code>Standard PS/2 Keyboard</code>, in Device Manager, then you know it's just a normal PS/2 Keyboard.</p>
 
@@ -286,11 +343,35 @@ This section is specific to Mobile platforms, such as Laptops and Handhelds. If 
 <a href=""><img src="../../../../assets/Microsoft/DeviceManager/PS2Keyboard.png" alt="General location of PS/2 Keyboard"></a>
 </div>
 
-<p align="center">Placeholder Step.</p>
+</details>
+
+<br>
+<details markdown="block">
+<summary>USB</summary>
+
+<h2 align="center">Trackpad Device</h2>
+
+<p align="center">Let's try and find the Trackpad via USB.</p>
+
+<p align="center">Placeholder Text</p>
 
 <div align="center">
-<a href=""><img src="../../../../assets/Microsoft/DeviceManager/Placeholder.png" alt="[Missing Content] Placeholder"></a>
+<a href=""><img src="../../../../assets/Microsoft/DeviceManager/USBTrackpad.png" alt="[Missing Content] General location of USB Trackpad"></a>
 </div>
+
+<h2 align="center">Keyboard Device</h2>
+
+<p align="center">Let's try and find the Keyboard via USB.</p>
+
+<p align="center">Placeholder Text</p>
+
+<div align="center">
+<a href=""><img src="../../../../assets/Microsoft/DeviceManager/USBKeyboard.png" alt="[Missing Content] General location of USB Keyboard"></a>
+</div>
+
+</details>
+
+<p align="center">Each section has various information you need to write down, for later usage. Please double check and make sure you've made a note of whatever was asked in a specific section, as it will play a key role in choosing kernel extensions and properly configuring them for your hardware.</p>
 
 <hr>
 

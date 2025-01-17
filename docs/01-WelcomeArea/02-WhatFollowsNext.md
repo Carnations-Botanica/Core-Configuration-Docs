@@ -44,6 +44,7 @@ has_toc: false
 <br>
 <hr>
 
+<h2 align="center">Things to consider...</h2>
 <br>
 <p align="center">When it comes to talking about the future of macOS's support for x86 / x86_64, we need to consider what it means for you, if you find out that you do not have supported hardware, but are willing to purchase supported hardware for your system for missing features or overall support.</p>
 
