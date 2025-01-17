@@ -59,6 +59,7 @@ All notable changes to this project will be documented in this file. The format 
 
 ### Changed
 - Collapsable Input Types for nicer page structure and easier legibility.
+- Footer date in a seperate commit
 
 ### Fixed
 -
