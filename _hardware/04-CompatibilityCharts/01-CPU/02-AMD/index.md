@@ -412,12 +412,12 @@ Still missing older than Ryzen data such as Bulldozer, Jaguar, and Puma
 
 | Name | Initial Support | Latest Support | Notes |
 | --- | --- | --- | --- |
-| 2800H | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
-| 2700U | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
-| 2600H | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
-| 2500U | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
-| 2300U | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
-| 2200U | High Sierra (10.13) | Sequoia (15) | Requires a dGPU |
+| 2800H | High Sierra (10.13) | Sequoia (15) | Vega 11, Experimental iGPU Acceleration  |
+| 2700U | High Sierra (10.13) | Sequoia (15) | Vega 10, Experimental iGPU Acceleration  |
+| 2600H | High Sierra (10.13) | Sequoia (15) | Vega 8, Experimental iGPU Acceleration  |
+| 2500U | High Sierra (10.13) | Sequoia (15) | Vega 8, Experimental iGPU Acceleration |
+| 2300U | High Sierra (10.13) | Sequoia (15) | Vega 6, Experimental iGPU Acceleration|
+| 2200U | High Sierra (10.13) | Sequoia (15) | Vega 3, Experimental iGPU Acceleration |
 
 ## Un-named AMD Zen-based APUs
 
