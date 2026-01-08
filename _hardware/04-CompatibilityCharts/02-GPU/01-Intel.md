@@ -35,8 +35,8 @@ Most iGPUs in the generation have support (except the unsupported "UHD Graphics"
 
 | Card | Initial Support | Latest Support | Notes |
 | --- | --- | --- | --- |
-| Iris Plus G7 | Catalina (10.15.4) | Sequoia (15) |  |
-| Iris Plus G4 | Catalina (10.15.4) | Sequoia (15) |  |
+| Iris Plus G7 | Catalina (10.15.4) | Tahoe (26) |  |
+| Iris Plus G4 | Catalina (10.15.4) | Tahoe (26) |  |
 
 ## Kaby/Coffee/Whiskey/Comet Lake (Refresh/Non-Refresh)
 
@@ -48,7 +48,7 @@ Most iGPUs are supported here (except the UHD 610 in the i5-10200H), though pay 
 | Iris Plus 655 | High Sierra (10.13.6) | Sequoia (15) |  |
 | Iris Plus 645 | High Sierra (10.13.6) | Sequoia (15) |  |
 | Iris Plus 640 | High Sierra (10.13.6) | Sequoia (15) |  |
-| UHD 630 | High Sierra (10.13.6) | Sequoia (15) |  |
+| UHD 630 | High Sierra (10.13.6) | Tahoe (26) |  |
 | UHD 620 | High Sierra (10.13.6) | Sequoia (15) |  |
 | UHD 617 | High Sierra (10.13.6) | Sequoia (15) |  |
 | UHD 615 | High Sierra (10.13.6) | Sequoia (15) |  |
@@ -138,6 +138,9 @@ Ventura (13) dropped support for Skylake iGPUs. However, since Skylake and Kaby 
 
 ### ARC Series
 
+{: .note }
+Dedicated GPUs from Intel are not supported. This applies to both the Alchemist and Battlemage lineups.
+
 | Card | Initial Support | Latest Support | Notes |
 | --- | --- | --- | --- |
 | A50 | None | None |  |
@@ -153,6 +156,11 @@ Ventura (13) dropped support for Skylake iGPUs. However, since Skylake and Kaby 
 | A580 | None | None |  |
 | A380 | None | None |  |
 | A310 | None | None |  |
+| B570 | None | None |  |
+| B580 | None | None |  |
+| B50 | None | None |  |
+| B60 | None | None |  |
+
 
 ### Xe Series
 
